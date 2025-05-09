@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tela de Carregamento</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .loader {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border-radius: 50%;
+      animation: spin 2s linear infinite, morph 2s ease-in-out infinite;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes morph {
+      0%, 100% {
+        border-radius: 50%;
+        background-color: #3437db;
+      }
+      50% {
+        border-radius: 10%;
+        background-color: #3ce756;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+</body>
+</html>
